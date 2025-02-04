@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            width: 27%;
+            height: 82px;
+            font-size: 16px;            
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com números</h1>
+    <button onclick="calcular()">Clique para calcular</button>
+    <p id="mudarfrase">O resultado vem aqui...</p>
+
+    <script>
+        alert('Seja Bem Vindo ao meu site!');
+
+        function calcular() {
+            let n1 = prompt('Digite um número! ');
+            var dobroNum = n1 * 2;
+            var metadeNum = n1 / 2;
+            document.getElementById('mudarfrase').innerHTML = ('O dobro de ' + n1 + ' é ' + dobroNum + ' e a metade é ' + metadeNum + '!');
+        }   
+    </script>
+</body>
+</html>

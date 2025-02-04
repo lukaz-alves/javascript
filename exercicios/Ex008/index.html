@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            width: 205px;
+            height: 82px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vários cálculos em JS</h1>
+    <button onclick="calculaNumero()">Clique para calcular</button>
+    <p id="mudarFrase">O resultado vai aparecer aqui...</p>
+    <hr>
+    <p id="numAbso"></p>
+    <p id="numInt"></p>
+    <p id="proxInt"></p>
+    <p id="raizQuad"></p>
+    <p id="raizCubi"></p>
+    <p id="ElevadoQuad"></p>
+    <p id="ElevadoCubo"></p>
+
+    <script>
+        function calculaNumero() {
+            let num = parseFloat(prompt('Digite um número:'));
+            document.getElementById('mudarFrase').innerHTML = ('O número a ser analisado aqui será o <b>' + num + '</b>');
+
+            document.getElementById('numAbso').innerHTML = ('O seu valor absoluto é ' + parseInt(Math.abs(num)));
+        }
+    </script>
+</body>
+</html>

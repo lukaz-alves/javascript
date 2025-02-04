@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(83, 83, 233);
+            color: white;
+            font: normal 18pt Arial;
+        }
+
+        div {
+            width: 100%;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clica em mim</div>
+
+
+    <h2 class="titulo">Segundo titulo da pagina aqui</h2>
+    <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis cumque incidunt odit, ducimus voluptas commodi consequatur, eligendi provident nemo adipisci, culpa voluptates fugit? Dolore itaque nulla culpa animi voluptates tempora! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, molestiae a. Eius illo cupiditate consequatur quis accusamus quia obcaecati, vel possimus blanditiis? Necessitatibus omnis soluta maiores quaerat consequuntur cupiditate iste.</p>
+
+    <script>
+        // window.document.write(window.document.URL)
+        var corpo = document.body
+        var p1 = document.getElementsByTagName('p')[1]
+        // document.write('Está escrito assim: ' + p1.innerHTML)
+        
+        /* var d = document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...' */
+        
+        var d = document.querySelector('div#msg') 
+        // para usar o class -> ('div.msg')
+        d.style.background = 'lightgreen'
+
+        // -------------------------------------------------------
+
+        let titulo = document.querySelector('h2.titulo')
+        titulo.style.background = 'green'
+        let texto = document.querySelector('p.texto')
+        texto.style.background = 'grey'
+    </script>
+</body>
+</html>

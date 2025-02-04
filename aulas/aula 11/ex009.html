@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASSAPORTE</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: rgb(243, 237, 148);
+            color: rgb(25, 7, 83);
+        }
+
+        h1 {
+            background-color: orangered;
+            margin: 0;
+            height: 100px;
+            padding-top: 50px;
+        }
+
+        h2 {
+            background-color: rgb(233, 191, 3);
+            margin: 0;
+            height: 100px;
+            padding-top: 50px;
+        }
+
+        #txtPais {
+            height: 35px;
+            width: 240px;
+        }
+
+        #botao {
+            height: 40px;
+            width: 140px;
+            background-color: rgb(228, 12, 12);
+            color: white;
+            font-size: 22px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ORIGEM</h1>
+    <h2>De qual país você é ?</h2>
+    País(Nação): <input type="text" name="txtPais" id="txtPais" placeholder="Digite um país">
+    <input type="button" value="Verificar" onclick="procurarPais()" id="botao">
+    <div id="res"></div>
+
+    <script>
+        function procurarPais() {
+            var txtP = document.querySelector('input#txtPais')
+            var res = document.querySelector('div#res')
+            var pais = (txtP.value)
+            res.innerHTML = `<p>Vivendo no(na) <strong>${pais}</strong></p>`
+            if (pais == 'Brasil') {
+                res.innerHTML = `</br>Você é Brasileiro`
+            } else {
+                res.innerHTML = `</br>Você é Estrangeiro`
+            }
+            res.innerHTML += `</br><p>Obrigado por responder!</p>`
+        }
+    </script>
+</body>
+</html>
